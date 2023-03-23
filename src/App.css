@@ -1,38 +1,94 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --content-width: 1000px;
+  --breakpoint: 799px;
+  --nav-height: 70px;
+  --nav-background: #262626;
+  --nav-font-color: #ffffff;
+  --link-hover-color: #2581dc;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 200px;
+}
+
+main {
+  flex: 1;
+}
+
+.navigation {
+  height: var(--nav-height);
+  background: var(--nav-background);
+}
+
+.nav-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+  position: relative;
+}
+
+nav li a,
+nav li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: var(--nav-height);
+  background: var(--nav-background);
+  color: var(--nav-font-color);
+  text-decoration: none;
+}
+
+nav li a:hover,
+footer a:hover {
+  background: var(--link-hover-color);
+  color: var(--nav-font-color);
+}
+
+nav li ul li {
+  min-width: 190px;
+}
+
+nav li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 180px; /* replace 200px with the actual height of your footer */
+  background-color: black;
+  color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
 }
