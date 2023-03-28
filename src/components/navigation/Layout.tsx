@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "../../NotFound";
 import { ContentPage } from "../content/ContentPage";
+import HomePage from "../content/HomePage";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
@@ -9,7 +10,7 @@ export const Layout = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<div />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/:slug" element={<ContentPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
